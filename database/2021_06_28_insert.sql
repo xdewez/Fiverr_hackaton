@@ -1,12 +1,12 @@
-insert into main_category (id, name) values (1, 'graphic and design');
-insert into main_category (id, name) values (2, 'writing and translations');
-insert into main_category (id, name) values (3, 'video and animation');
-insert into main_category (id, name) values (4, 'music and audio');
+insert into main_category (id, name) values (1, 'design');
+insert into main_category (id, name) values (2, 'writing');
+insert into main_category (id, name) values (3, 'video');
+insert into main_category (id, name) values (4, 'audio');
 insert into main_category (id, name) values (5, 'business');
 insert into main_category (id, name) values (6, 'lifestyle');
-insert into main_category (id, name) values (7, 'programming and tech');
+insert into main_category (id, name) values (7, 'programming');
 insert into main_category (id, name) values (8, 'data');
-insert into main_category (id, name) values (9, 'marketing digital');
+insert into main_category (id, name) values (9, 'marketing');
 
 insert into sub_category (id, name) values (1, 'Andalax');
 insert into sub_category (id, name) values (2, 'Zathin');
