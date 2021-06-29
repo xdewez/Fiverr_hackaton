@@ -11,6 +11,8 @@
   "keywords": [],
   "description": "",
   "dependencies": {
+    "bird": "^0.7.0",
+    "blue": "^1.1.1",
     "bluebird": "^3.7.2",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
