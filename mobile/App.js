@@ -1,31 +1,31 @@
 import 'react-native-gesture-handler';
 
 import * as React from 'react';
-import { MaterialCommunityIcons, Entypo, Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import ProfileScreen from './screens/ProfileScreen';
-import AccountScreen from './screens/AccountScreen';
+import SearchScreen from './screens/SearchScreen';
+import MyteamScreen from './screens/MyteamScreen';
 import SettingsScreen from './screens/Setting';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function ProfileStack() {
+function SearchStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Profile"
+      initialRouteName="Search"
       screenOptions={{
         headerStyle: { backgroundColor: '#1dbf73' },
         headerTintColor: '#fff',
         headerTitleStyle: { fontWeight: 'bold' },
       }}>
       <Stack.Screen
-        name="Profile"
-        component={AccountScreen}
-        options={{ title: 'Profile Page' }}
+        name="Myteam"
+        component={SearchScreen}
+        options={{ title: 'Search Page' }}
       />
       <Stack.Screen
         name="Settings"
@@ -36,19 +36,19 @@ function ProfileStack() {
   );
 }
 
-function AccountStack() {
+function MyteamStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Account"
+      initialRouteName="Myteam"
       screenOptions={{
         headerStyle: { backgroundColor: '#1dbf73' },
         headerTintColor: '#fff',
         headerTitleStyle: { fontWeight: 'bold' },
       }}>
       <Stack.Screen
-        name="Account"
-        component={ProfileScreen}
-        options={{ title: 'Account Page' }}
+        name="Myteam"
+        component={MyteamScreen}
+        options={{ title: 'Myteam Page' }}
       />
       <Stack.Screen
         name="Settings"
@@ -69,14 +69,14 @@ function SettingsStack() {
         headerTitleStyle: { fontWeight: 'bold' },
       }}>
       <Stack.Screen
-        name="Settings"
+        name="Search"
         component={SettingsScreen}
-        options={{ title: 'Settings Page' }}
+        options={{ title: 'Search Page' }}
       />
       <Stack.Screen
-        name="Account"
-        component={AccountScreen}
-        options={{ title: 'Account Page' }}
+        name="Myteam"
+        component={MyteamScreen}
+        options={{ title: 'Myteam Page' }}
       />
     </Stack.Navigator>
   );
@@ -86,27 +86,27 @@ function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Profile"
+        initialRouteName="Search"
         tabBarOptions={{
           activeTintColor: '#1dbf73',
         }}>
         <Tab.Screen
-          name="ProfileStack"
-          component={ProfileStack}
+          name="SearchStack"
+          component={SearchStack}
           options={{
-            tabBarLabel: 'Profile',
+            tabBarLabel: '',
             tabBarIcon: ({ color, size }) => (
-              <Entypo name="home" size={size} color={color} />
+              <Ionicons name="search-sharp" size={size} color={color} />
             ),
           }}
         />
         <Tab.Screen
-          name="Account"
-          component={AccountStack}
+          name="Myteam"
+          component={MyteamStack}
           options={{
-            tabBarLabel: 'Account',
+            tabBarLabel: '',
             tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="account" size={size} color={color} />
+              <MaterialIcons name="groups" size={size} color={color} />
             ),
           }}
         />
@@ -114,7 +114,7 @@ function App() {
           name="Settings"
           component={SettingsStack}
           options={{
-            tabBarLabel: 'Settings',
+            tabBarLabel: '',
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="settings" size={size} color={color} />
             ),

@@ -1,7 +1,23 @@
 import * as React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import {
+  TouchableOpacity,
+  StyleSheet,
+  View,
+  Text,
+  SafeAreaView,
+} from 'react-native';
 
-const AccountScreen = () => {
+const styles = StyleSheet.create({
+  button: {
+    alignItems: "center",
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+    width: 300,
+    marginTop: 16,
+  },
+});
+
+const SearchScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, padding: 16 }}>
@@ -17,11 +33,12 @@ const AccountScreen = () => {
               textAlign: 'center',
               marginBottom: 16,
             }}>
-            The page of all freelancers
+            The profile of all freelancers
           </Text>
         </View>
       </View>
     </SafeAreaView>
   );
 };
-export default AccountScreen;
+
+export default SearchScreen;

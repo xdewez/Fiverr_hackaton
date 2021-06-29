@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const ProfileScreen = ({ navigation }) => {
+const MyteamScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, padding: 16 }}>
@@ -33,7 +33,7 @@ const ProfileScreen = ({ navigation }) => {
               textAlign: 'center',
               marginBottom: 16,
             }}>
-            You are in your profile page
+            You are in your team page
           </Text>
         </View>
       </View>
@@ -41,4 +41,4 @@ const ProfileScreen = ({ navigation }) => {
   );
 };
 
-export default ProfileScreen;
+export default MyteamScreen;

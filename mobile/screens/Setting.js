@@ -33,7 +33,7 @@ const SettingsScreen = ({ navigation }) => {
               textAlign: 'center',
               marginBottom: 16,
             }}>
-            Coming soon settings page 
+            Your profile page
           </Text>
         </View>
       </View>
