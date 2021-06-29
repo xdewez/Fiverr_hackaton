@@ -6,6 +6,7 @@ import WelcomeScreen from './components/WelcomeScreen';
 import ProfilScreen from './components/ProfileSreen';
 import DetailsScreen from './components/DetailsScreen';
 import GetStartedScreen from './components/GetStartedScreen';
+import Settings from './components/Settings';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -14,10 +15,13 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}>
       <Navigator>
+        {/*
         <Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
         <Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
         <Screen name="Profil" component={ProfilScreen} options={{ headerShown: false }} />
         <Screen name="Details" component={DetailsScreen} />
+        */}
+        <Screen name="Settings" component={Settings} options={{ headerShown: false }} />
       </Navigator>
     </NavigationContainer>
   );
