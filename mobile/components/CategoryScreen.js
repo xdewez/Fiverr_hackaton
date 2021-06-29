@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 
-export default function Details(props) {
+export default function CategoryScreen(props) {
 
     const goTo = () => {
         props.navigation.push('Details');
