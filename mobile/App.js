@@ -15,12 +15,10 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}>
       <Navigator>
-        {/*
         <Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
         <Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
         <Screen name="Profil" component={ProfilScreen} options={{ headerShown: false }} />
         <Screen name="Details" component={DetailsScreen} />
-        */}
         <Screen name="Settings" component={Settings} options={{ headerShown: false }} />
       </Navigator>
     </NavigationContainer>
