@@ -1,18 +1,17 @@
 import * as React from 'react';
 import {
     View,
+    ScrollView,
+    Pressable,
     StyleSheet,
     Image,
-    Text,
-    Pressable,
-    ScrollView
+    Text
 } from 'react-native';
 
-
-export default function CategoryScreen(props) {
+export default function ProfilScreen(props) {
 
     const goTo = () => {
-        props.navigation.push('Profil');
+        props.navigation.push('Details');
     };
 
     return (

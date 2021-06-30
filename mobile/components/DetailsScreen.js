@@ -30,7 +30,7 @@ const FadeInView = (props) => {
     );
 }
 
-const DetailsScreen = () => {
+const DetailsScreen = (props) => {
     return (
         <SafeAreaView style={styles.container}>
             <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
