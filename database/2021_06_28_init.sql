@@ -1,4 +1,4 @@
-CREATA DATABASE fiverr;
+CREATE DATABASE fiverr;
 
 USE fiverr;
 

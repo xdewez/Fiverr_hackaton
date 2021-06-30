@@ -5,9 +5,9 @@ import {
     Image,
     Text,
     Pressable,
-    ScrollView
+    ScrollView,
+    TouchableOpacity
 } from 'react-native';
-
 
 export default function CategoryScreen(props) {
 
@@ -15,34 +15,69 @@ export default function CategoryScreen(props) {
         props.navigation.push('Profil');
     };
 
+    const goTeam = () => {
+        props.navigation.push('Team');
+    };
+
     return (
         <ScrollView style={styles.container}>
+            <View style={styles.center}>
+                <TouchableOpacity style={styles.btnGet} onPress={goTeam}>
+                    <Text style={styles.font}>My Team</Text>
+                </TouchableOpacity>
+            </View>
             <Pressable style={styles.vignette} onPress={goTo}>
                 <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Design</Text>
-                    <Text style={styles.plus}>+</Text>
                 </View>
             </Pressable>
             <Pressable style={styles.vignette} onPress={goTo}>
                 <Image style={styles.img} source={require('../assets/lion_logo.jpg')} />
                 <View style={styles.userName}>
-                    <Text style={styles.text}>Developpement</Text>
-                    <Text style={styles.plus}>+</Text>
+                    <Text style={styles.text}>Writing</Text>
                 </View>
             </Pressable>
             <Pressable style={styles.vignette} onPress={goTo}>
                 <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
                 <View style={styles.userName}>
-                    <Text style={styles.text}>Illustration</Text>
-                    <Text style={styles.plus}>+</Text>
+                    <Text style={styles.text}>Video</Text>
                 </View>
             </Pressable>
-            <View style={styles.vignette}>
-                <Image style={styles.img} source={require('../assets/owl_logo.jpg')} />
+            <View style={styles.vignette} onPress={goTo}>
+                <Image style={styles.img} source={require('../assets/lion_logo.jpg')} />
                 <View style={styles.userName}>
-                    <Text style={styles.text}>Backend</Text>
-                    <Text style={styles.plus}>+</Text>
+                    <Text style={styles.text}>Audio</Text>
+                </View>
+            </View>
+            <View style={styles.vignette} onPress={goTo}>
+                <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
+                <View style={styles.userName}>
+                    <Text style={styles.text}>Business</Text>
+                </View>
+            </View>
+            <View style={styles.vignette} onPress={goTo}>
+                <Image style={styles.img} source={require('../assets/lion_logo.jpg')} />
+                <View style={styles.userName}>
+                    <Text style={styles.text}>Lifestyle</Text>
+                </View>
+            </View>
+            <View style={styles.vignette} onPress={goTo}>
+                <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
+                <View style={styles.userName}>
+                    <Text style={styles.text}>Programming</Text>
+                </View>
+            </View>
+            <View style={styles.vignette} onPress={goTo}>
+                <Image style={styles.img} source={require('../assets/lion_logo.jpg')} />
+                <View style={styles.userName}>
+                    <Text style={styles.text}>Data</Text>
+                </View>
+            </View>
+            <View style={styles.vignette} onPress={goTo}>
+                <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
+                <View style={styles.userName}>
+                    <Text style={styles.text}>Marketing</Text>
                 </View>
             </View>
         </ScrollView>
@@ -52,6 +87,9 @@ export default function CategoryScreen(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+    },
+    center: {
+        alignItems: 'center',
     },
     vignette: {
         margin: 15,
@@ -76,7 +114,8 @@ const styles = StyleSheet.create({
         marginLeft: 15,
     },
     text: {
-        color: '#37D596'
+        color: '#37D596',
+        fontSize: 18,
     },
     btn: {
         width: '100%',
@@ -86,5 +125,27 @@ const styles = StyleSheet.create({
     plus: {
         fontSize: 25,
         color: '#37D596'
-    }
+    },
+    btnGet: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '60%',
+        height: 50,
+        marginTop: 10,
+        backgroundColor: '#37D596',
+        color: '#FFFFFF',
+        borderRadius: 50,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 2.5,
+        elevation: 6,
+    },
+    font: {
+        color: '#FFFFFF',
+        fontSize: 20,
+    },
 })

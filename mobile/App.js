@@ -16,6 +16,7 @@ export default function App() {
         <Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
         <Screen name="Category" component={CategoryScreen} options={{ headerShown: false }} />
         <Screen name="Profil" component={ProfilScreen} />
+        {/* <Screen name="Team" component={TeamScreen} /> */}
       </Navigator>
     </NavigationContainer>
   );
