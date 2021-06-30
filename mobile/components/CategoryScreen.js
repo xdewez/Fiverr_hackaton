@@ -27,55 +27,55 @@ export default function CategoryScreen(props) {
                 </TouchableOpacity>
             </View>
             <Pressable style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/designer-graphique.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Design</Text>
                 </View>
             </Pressable>
             <Pressable style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/lion_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/codage-web.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Writing</Text>
                 </View>
             </Pressable>
             <Pressable style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/lecteur-video.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Video</Text>
                 </View>
             </Pressable>
             <View style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/lion_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/cours-audio.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Audio</Text>
                 </View>
             </View>
             <View style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/business-en-ligne.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Business</Text>
                 </View>
             </View>
             <View style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/lion_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/lifestyle.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Lifestyle</Text>
                 </View>
             </View>
             <View style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/coding.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Programming</Text>
                 </View>
             </View>
             <View style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/lion_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/data.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Data</Text>
                 </View>
             </View>
             <View style={styles.vignette} onPress={goTo}>
-                <Image style={styles.img} source={require('../assets/pirate_logo.jpg')} />
+                <Image style={styles.img1} source={require('../assets/social-media.png')} />
                 <View style={styles.userName}>
                     <Text style={styles.text}>Marketing</Text>
                 </View>
@@ -92,26 +92,32 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     vignette: {
+        alignItems: 'center',
         margin: 15,
         width: '90%',
         height: 160,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#edf2f0',
         borderRadius: 10,
         shadowOpacity: 0.27,
         shadowRadius: 2.5,
         elevation: 6,
     },
-    img: {
-        width: '100%',
-        height: 120,
+    img1: {
+        width: '35%',
+        height: 100,
+        margin: 10,
+        borderRadius: 5,
     },
     userName: {
         flex: 1,
-        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: "space-between",
+        justifyContent: 'center',
         marginRight: 15,
         marginLeft: 15,
+        backgroundColor: '#fff',
+        width: '100%',
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
     },
     text: {
         color: '#37D596',
