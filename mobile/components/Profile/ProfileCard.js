@@ -14,7 +14,7 @@ export default function ProfileCard(props) {
       <View style={styles.header}>
         <View style={styles.headerContent}>
           <Image style={styles.avatar}
-            source={{uri = 'https://randomuser.me/api/portraits/men/28.jpg'}} />
+            source={props.picture/*{ uri: 'https://randomuser.me/api/portraits/men/28.jpg' }*/} />
           <Text style={styles.name}>{props.firstname} {props.lastname}</Text>
           <Text style={styles.userInfo}>{props.category}</Text>
           <View style={styles.rating}>

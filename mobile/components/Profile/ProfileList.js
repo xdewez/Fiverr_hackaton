@@ -45,12 +45,12 @@ export default function ProfileList() {
                     .get('https://randomuser.me/api/?results=20')
                     .then((response) => response.data)
                     .then((data) => {
-                        const newUsers = users.map((u, index) => {
+                        const newUser = users.map((u, index) => {
                             u.picture = data.results[index].picture.medium;
-                            return u;
+                            return {...users, u};
+                            
                         });
-                        console.log(newUsers);
-                        setUser(newUsers);
+                        setUser(newUser);
                     })
             })
     }, []);
@@ -64,6 +64,7 @@ export default function ProfileList() {
                     lastname={item.lastname}
                     category={item.name}
                     ranking={item.ranking}
+                    picture={item.picture}
                 />
             ))}
         </ScrollView>
