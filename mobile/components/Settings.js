@@ -27,11 +27,11 @@ export default function Profile(props) {
     };
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView>
       <View style={styles.header}>
         <View style={styles.headerContent}>
           <Image style={styles.avatar}
-            source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }} />
+            source={{ uri: 'https://randomuser.me/api/portraits/men/40.jpg' }} />
           <Text style={styles.name}>{user.firstname} {user.lastname}</Text>
           <Text style={styles.userInfo}>{user.email}</Text>
           <View style={styles.rating}>
